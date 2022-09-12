@@ -24,6 +24,9 @@ const QUERY = gql`
         }
       }
       coverPhoto {
+        createdBy {
+          id
+        }
         url
       }
     }
@@ -40,8 +43,7 @@ export async function getStaticProps() {
   };
 }
 
-
-export default function Home({posts}) {
+export default function Home({ posts }) {
   return (
     <div className={styles.container}>
       <Head>
