@@ -8,7 +8,7 @@ export default function BlogCard({
   datePublished,
   slug,
 }) {
-  console.log(author)
+  console.log(author)   
   return (
     <div className={styles.card}>
       <Link href={"/posts/" + slug}>
@@ -19,12 +19,12 @@ export default function BlogCard({
       <div className={styles.text}>
         <h2>{title}</h2>
         <div className={styles.details}>
-          <div style={styles.author}>
+          <div className={styles.author}>
             <img src={author.avatar.url} alt="" />
             <h3>{author.name}</h3>
           </div>
           <div className={styles.date}>
-            <h3>{datePublished}</h3>
+            <h3 style={{paddingLeft: "1rem"}}>{datePublished}</h3>
           </div>
         </div>
       </div>
